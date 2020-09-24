@@ -1,9 +1,4 @@
 class DataBroker {
-
-  /*String[] data = loadStrings("dnd.csv");
-   String [] list = split(data[0], ',');
-   String[] etTal = splitTokens(data[1], ";"); //rykker et felt lodret
-   */
 String[] data;
 
   void loadData() {
