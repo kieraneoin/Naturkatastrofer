@@ -1,6 +1,0 @@
-class Input {
-
-  void mouseLoc() {
-    println(mouseX, mouseY);
-  }
-}
