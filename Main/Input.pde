@@ -9,32 +9,32 @@ class Input {
 
   void display() {
     displayInput();
-    drawText();
-    getUserInput();
+    displayText();
+    tjekBrugerInput();
   }
 
 
   void displayInput() {
-    stroke(205);
-    fill(205);
+    stroke(100);
+    fill(100);
     rect(x, y, inputBredde, inputHoejde);
   }
 
-  void drawText() {
+  void displayText() {
     textAlign(LEFT, CENTER);
     textSize(16);
     fill(255);
-    text(textValue + getCursor(), x + 5, y + inputHoejde/2);
+    text(textValue + hentMus(), x + 5, y + inputHoejde/2);
   }
 
-  void getUserInput() {
+  void tjekBrugerInput() {
     if (!keyPressed) {
       keyReleased = true;
       keyCounter = 0;
       previousKeyCounter = 0;
     }
     if (keyPressed && c != key) {
-      keyCounter = millis();
+      keyCounter = millis(); //viser hvor mange millisekunder det er siden programmet startede
 
       c = key;
 
@@ -47,7 +47,7 @@ class Input {
     }
   }
 
-  String getCursor() {
+  String hentMus() {
     return hovering() && (frameCount>>4 & 1) == 0 ? "|" : "";
   }
 
