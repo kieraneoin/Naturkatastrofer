@@ -10,5 +10,7 @@ background(0);
 void draw(){
 d.loadData();
 input1.display();
+println(input1.getValue());
+
 
 }

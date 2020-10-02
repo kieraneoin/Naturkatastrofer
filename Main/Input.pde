@@ -6,6 +6,9 @@ class Input {
     this.inputHoejde = inputH;
   }
 
+ String getValue(){
+   return textValue;
+ }
 
   void display() {
     displayInput();
