@@ -1,4 +1,12 @@
 class Input {
+
+   int x, y, inputBredde, inputHoejde, textLimit = 40;
+   float currentValue, keyCounter, previousKeyCounter;
+   String textValue;
+   char keyInput, c;
+   boolean keyReleased;
+
+
   Input(int x, int y, int inputB, int inputH) {
     this.x = x;
     this.y = y;
@@ -6,9 +14,9 @@ class Input {
     this.inputHoejde = inputH;
   }
 
- String getValue(){
-   return textValue;
- }
+  String getValue() {
+    return textValue;
+  }
 
   void display() {
     displayInput();
@@ -57,10 +65,4 @@ class Input {
   boolean hovering() {
     return mouseX >= x && mouseX <= x + inputBredde && mouseY >= y && mouseY <= y + inputHoejde;
   }
-
-  private int x, y, inputBredde, inputHoejde, textLimit = 40;
-  private float currentValue, keyCounter, previousKeyCounter;
-  private String textValue;
-  private char keyInput, c;
-  private boolean keyReleased;
 }
